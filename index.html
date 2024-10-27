@@ -1,12 +1,21 @@
+<script>
+    var data = new FormData();
+    data.append("device_id", "d2c3b81999a54d1353969e30a4d019c2");
+    data.append("number", "6281314428552");
+    data.append("message", "Dashboard");
+    data.append("file", "dashboard.jpg");
+    // data.append("file", "https://raw.githubusercontent.com/dentbagus/rtn.github.io/refs/heads/main/dashboard.jpg");
 
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Stok Koreksi</title>
-</head>
+    xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+        console.log(this.responseText);
+    }
+    });
 
-<body>
-<h1>HELLO WORLD!</h1>
-</body>
-</html>
+    xhr.open("POST", "https://app.whacenter.com/api/send");
+
+    xhr.send(data);
+</script>
