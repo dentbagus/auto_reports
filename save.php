@@ -2,6 +2,10 @@
 
 date_default_timezone_set("Asia/Jakarta");
 
+echo 'hello world!';
+
+return false;
+
 if ( $_POST["image"] != "" ) {
  
     $image = $_POST["image"];
