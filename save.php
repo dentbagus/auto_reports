@@ -8,7 +8,7 @@ $image = explode(";", $image)[1];
 
 define('UPLOAD_DIR', 'images/');
 
-$mypop = $name . ".jpg";
+$mypop = $name . "png";
 
 $file = UPLOAD_DIR . $mypop;
  
